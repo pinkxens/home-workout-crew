@@ -1,5 +1,5 @@
 /* ============================================================
-   Workout detail modal — click-to-expand embedded YouTube player
+   Workout detail modal: click-to-expand embedded YouTube player
    ============================================================ */
 
 const Modal = (() => {

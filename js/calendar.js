@@ -1,5 +1,5 @@
 /* ============================================================
-   Calendar rendering — builds the week-by-week grid from
+   Calendar rendering: builds the week-by-week grid from
    js/data.js and wires up the video modal.
    ============================================================ */
 
@@ -47,7 +47,7 @@ function renderWeeks() {
       const date = getDateForDay(week.week, weekday);
 
       if (!entry) {
-        // No data yet for this day — show an open placeholder rather than
+        // No data yet for this day: show an open placeholder rather than
         // guessing it's a rest day.
         const placeholderEl = document.createElement("div");
         placeholderEl.className = "day-card is-unscheduled";

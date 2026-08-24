@@ -1,5 +1,5 @@
 /* ============================================================
-   Home Workout Crew — base styles
+   Home Workout Crew: base styles
    Warm, friendly palette. Extend by adding new CSS custom
    properties / component blocks rather than editing values
    in place, so future pages can reuse them.
@@ -123,6 +123,57 @@ a { color: inherit; }
 }
 
 .join-call-btn:hover { background: var(--teal-dark); transform: translateY(-1px); }
+
+/* ---------- Call banner (prominent, every page) ---------- */
+
+.call-banner {
+  background: var(--teal-dark);
+  color: #fff;
+}
+
+.call-banner-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.call-banner-text {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.call-banner-text .call-banner-sub {
+  display: block;
+  font-weight: 500;
+  font-size: 0.85rem;
+  opacity: 0.9;
+  margin-top: 2px;
+}
+
+.call-banner .join-call-btn {
+  background: var(--coral);
+  font-size: 1rem;
+  padding: 11px 22px;
+}
+
+.call-banner .join-call-btn:hover { background: var(--coral-dark); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .call-banner .join-call-btn {
+    animation: call-pulse 2.4s ease-in-out infinite;
+  }
+}
+
+@keyframes call-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(242, 92, 78, 0.55); }
+  50% { box-shadow: 0 0 0 8px rgba(242, 92, 78, 0); }
+}
 
 /* ---------- Hero ---------- */
 
@@ -473,4 +524,156 @@ a { color: inherit; }
   padding-top: 20px;
   border-top: 1px solid var(--border);
   font-size: 0.88rem;
+}
+
+/* ---------- Long-form content pages (Safety, Resources) ---------- */
+
+.content-page {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 30px 20px;
+}
+
+.content-page > .page-intro {
+  color: var(--text-muted);
+  font-size: 1.02rem;
+  margin: 0 0 8px;
+}
+
+.content-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 22px 24px;
+  margin-top: 20px;
+}
+
+.content-card h2 {
+  margin: 0 0 12px;
+  font-size: 1.15rem;
+}
+
+.content-card h3 {
+  margin: 18px 0 8px;
+  font-size: 1rem;
+}
+
+.content-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.content-card li {
+  margin-bottom: 7px;
+}
+
+.content-card p {
+  margin: 0 0 10px;
+  color: var(--text);
+}
+
+.content-card .citation {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 4px;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.data-table th, .data-table td {
+  text-align: left;
+  padding: 9px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  height: 30px;
+}
+
+.data-table th {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.effort-table td:first-child, .effort-table th:first-child {
+  font-weight: 600;
+}
+
+/* severity guidance cards, ordered mild to emergency */
+.severity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.severity-item {
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  border-left: 5px solid var(--grey);
+  background: var(--surface-muted);
+}
+
+.severity-item .severity-label {
+  font-weight: 700;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 3px;
+}
+
+.severity-item.is-ok { border-left-color: var(--green); }
+.severity-item.is-ok .severity-label { color: var(--green); }
+
+.severity-item.is-modify { border-left-color: var(--amber); }
+.severity-item.is-modify .severity-label { color: var(--amber); }
+
+.severity-item.is-stop { border-left-color: var(--coral-dark); }
+.severity-item.is-stop .severity-label { color: var(--coral-dark); }
+
+.severity-item.is-emergency {
+  border-left-color: #b0242f;
+  background: rgba(176, 36, 47, 0.08);
+}
+.severity-item.is-emergency .severity-label { color: #b0242f; }
+
+/* ---------- Survey / resources cards ---------- */
+
+.resource-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.resource-link {
+  display: block;
+  text-decoration: none;
+  background: var(--surface-muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.resource-link:hover { transform: translateY(-2px); box-shadow: var(--shadow-hover); }
+
+.resource-link .resource-sub {
+  display: block;
+  font-weight: 400;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 2px;
 }
