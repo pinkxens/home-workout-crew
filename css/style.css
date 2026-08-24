@@ -56,6 +56,38 @@ html, body {
 
 a { color: inherit; }
 
+img, svg { max-width: 100%; }
+
+/* ---------- Accessibility helpers ---------- */
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  z-index: 200;
+  background: var(--coral);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
+
+/* Visible keyboard focus ring on every interactive element. Mouse/touch
+   clicks don't trigger :focus-visible, so this never shows on a tap. */
+a:focus-visible,
+button:focus-visible,
+.day-card:focus-visible {
+  outline: 3px solid var(--coral-dark);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
 /* ---------- Header / nav ---------- */
 
 .site-header {
@@ -91,7 +123,10 @@ a { color: inherit; }
 
 .main-nav {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   gap: 6px;
+  justify-content: center;
 }
 
 .nav-link {
@@ -101,6 +136,9 @@ a { color: inherit; }
   border-radius: var(--radius-sm);
   font-weight: 600;
   font-size: 0.92rem;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
   transition: background 0.15s ease, color 0.15s ease;
 }
 
@@ -110,11 +148,13 @@ a { color: inherit; }
 .join-call-btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 7px;
   text-decoration: none;
   background: var(--teal);
   color: #fff;
   padding: 9px 16px;
+  min-height: 44px;
   border-radius: var(--radius-sm);
   font-weight: 700;
   font-size: 0.92rem;
@@ -272,7 +312,6 @@ a { color: inherit; }
 .day-card:hover, .day-card:focus-visible {
   transform: translateY(-2px);
   box-shadow: var(--shadow-hover);
-  outline: none;
 }
 
 .day-card.is-rest {
@@ -676,4 +715,43 @@ a { color: inherit; }
   font-size: 0.78rem;
   color: var(--text-muted);
   margin-top: 2px;
+}
+
+/* ---------- Responsive: tablet ---------- */
+
+@media (max-width: 768px) {
+  .header-inner { padding: 12px 16px; }
+  .main-nav { width: 100%; justify-content: center; }
+  .hero { padding: 28px 16px 8px; }
+  .calendar-section { padding: 16px 16px 6px; }
+  .content-page { padding: 24px 16px; }
+  .guidelines-section { margin: 16px auto 44px; padding: 16px; }
+  .resource-links { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+  .modal-box { padding: 18px; }
+}
+
+/* ---------- Responsive: mobile ---------- */
+
+@media (max-width: 480px) {
+  .brand-name { font-size: 1rem; }
+  .nav-link { padding: 8px 10px; font-size: 0.86rem; }
+  .join-call-btn { padding: 9px 14px; font-size: 0.86rem; width: 100%; }
+  .header-inner .join-call-btn { width: auto; }
+  .call-banner-inner { padding: 12px 16px; }
+  .call-banner-inner .join-call-btn { width: 100%; }
+  .call-banner-text { font-size: 0.92rem; }
+  .hero h1 { font-size: 1.5rem; }
+  .week-block { padding: 14px 12px 16px; }
+  .week-range { margin-left: 0; width: 100%; }
+  .day-card { min-height: 110px; padding: 8px; }
+  .content-card { padding: 16px 16px; }
+  .data-table { font-size: 0.82rem; }
+  .data-table th, .data-table td { padding: 7px 8px; }
+  .resource-links { grid-template-columns: 1fr 1fr; }
+  .placeholder-section { padding: 30px 18px; margin: 30px auto; }
+  .join-call-btn.is-large { width: 100%; justify-content: center; }
+}
+
+@media (max-width: 340px) {
+  .resource-links { grid-template-columns: 1fr; }
 }

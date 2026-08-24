@@ -36,7 +36,7 @@ const VIDEOS = {
   joDanceRihannaBeyonce: { type: "dance", category: "Grow with Jo Dance", videoId: "V5QVJv_4cEA", title: "Rihanna vs. Beyoncé Dance Party" },
   miraStandingPilatesLegs: { type: "pilates", category: "Flow with Mira Pilates", videoId: "xyAHua-HDqs", title: "20-Minute Standing Pilates: Legs, Thighs, Glutes, Hips and Core" },
   bodyProjectStanding30: { type: "cardio", category: "Body Project Cardio", videoId: "gC_L9qAHVJ8", title: "30-Minute All-Standing Beginner Workout" },
-  joDanceGospel: { type: "dance", category: "Grow with Jo Dance", videoId: "nLJhTkLhK5U", title: "Gospel Dance Party" },
+  joDanceGospel: { type: "dance", category: "Grow with Jo Dance", videoId: "uyWYzKgUgLI", title: "Gospel Dance Party" },
   joStrengthPilatesAbs: { type: "strength", category: "Grow with Jo Strength", videoId: "H4ynOuuT8w4", title: "Full-Body Dumbbell Strength and Standing Pilates Abs" },
   joDanceRnB2000s: { type: "dance", category: "Grow with Jo Dance", videoId: "D-LubT53KKU", title: "15-Minute 2000s R&B Dance Workout" },
   joDanceMissyElliott: { type: "dance", category: "Grow with Jo Dance", videoId: "5uC8Ym0i42o", title: "Missy Elliott Dance Workout" }

@@ -18,8 +18,10 @@ js/calendar.js             Renders the week/day grid from data.js
 js/modal.js                 Powers the click-to-expand embedded video player
 pages/watch-party.html      The daily 7 AM ET call: join button, Meet link
 pages/safety.html           Standing-workout safety guide and modifications
-pages/survey.html           Link out to the group feedback survey
+pages/survey.html           Group feedback survey (currently a coming-soon placeholder)
 pages/resources.html        Body measurement template and other links
+pages/guidelines.html       Getting started (photos, measurements, dietary
+                          tracking) and the participation/liability disclaimer
 ```
 
 ## The Google Meet link and call time
@@ -63,9 +65,18 @@ instead of `videoId`.
 
 ## The survey
 
-`pages/survey.html` links out to the group's Google Form
-(`https://forms.gle/G5KnAuQLXaFuHVMEA`). To point it at a different form,
-search for `forms.gle` in that file and swap the link.
+`pages/survey.html` currently shows a "coming soon" placeholder. The
+group's Google Form link is kept in an HTML comment at the top of that
+file's `<main>` (`https://forms.gle/G5KnAuQLXaFuHVMEA`); to go live again,
+swap the placeholder section back for a link/button to that URL (or a new
+form link).
+
+## Guidelines and the disclaimer
+
+`pages/guidelines.html` holds the "getting started" content (before/after
+photos, body measurements, dietary tracking) and the full participation and
+liability disclaimer, anchored at `#disclaimer` and linked from every
+page's footer. Edit that file directly to change the disclaimer language.
 
 ## Planned next features
 
