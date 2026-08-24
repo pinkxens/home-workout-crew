@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Home Workout Crew — Workout Calendar</title>
+<meta name="description" content="Dance, cardio, strength, pilates, and yoga workout calendar for the Home Workout Crew online group." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">
+      <span class="brand-emoji" aria-hidden="true">🏋️</span>
+      <span class="brand-name">Home Workout Crew</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="nav-link is-active">Calendar</a>
+      <a href="pages/watch-party.html" class="nav-link">Watch Party</a>
+      <a href="#guidelines" class="nav-link">Guidelines</a>
+      <a href="https://meet.google.com/uov-ratx-ayu" class="join-call-btn" target="_blank" rel="noopener">📹 Join Workout Call</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Workout Calendar</h1>
+    <p class="hero-sub">Monday–Thursday workouts, Friday–Sunday rest. Currently scheduled through September 30, 2026 — more weeks get added as the plan continues.</p>
+  </section>
+
+  <section id="calendar" class="calendar-section" aria-label="Workout calendar">
+    <div id="weeks-container" class="weeks-container">
+      <!-- Weeks are rendered here by js/calendar.js -->
+    </div>
+  </section>
+
+  <section id="guidelines" class="guidelines-section" aria-label="Guidelines">
+    <h2>Guidelines for the group</h2>
+    <ul id="guidelines-list" class="guidelines-list">
+      <!-- Rendered by js/calendar.js -->
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>Home Workout Crew — built for the group, made to grow. <a href="pages/watch-party.html">Join the workout call</a> to work out together.</p>
+</footer>
+
+<!-- Video / workout detail modal -->
+<div id="workout-modal" class="modal-overlay" hidden>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
+    <p id="modal-meta" class="modal-meta"></p>
+    <h3 id="modal-title" class="modal-title"></h3>
+    <div class="video-frame">
+      <iframe id="modal-iframe" src="" title="Workout video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen loading="lazy"></iframe>
+    </div>
+    <p id="modal-note" class="modal-note"></p>
+    <a id="modal-yt-link" class="yt-link" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
+  </div>
+</div>
+
+<script src="js/data.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/calendar.js"></script>
+</body>
+</html>
