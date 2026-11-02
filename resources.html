@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Resources | Home Workout Crew</title>
+<meta name="description" content="A progress-tracking template and other helpful links for the Home Workout Crew." />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏋️</text></svg>" />
+<link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="../index.html">
+      <span class="brand-emoji" aria-hidden="true">🏋️</span>
+      <span class="brand-name">Home Workout Crew</span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html" class="nav-link">Calendar</a>
+      <a href="watch-party.html" class="nav-link">Watch Party</a>
+      <a href="safety.html" class="nav-link">Safety</a>
+      <a href="survey.html" class="nav-link">Survey</a>
+      <a href="resources.html" class="nav-link is-active">Resources</a>
+      <a href="guidelines.html" class="nav-link">Guidelines</a>
+      <a href="https://meet.google.com/uov-ratx-ayu" class="join-call-btn" target="_blank" rel="noopener">📹 Join Workout Call</a>
+    </nav>
+  </div>
+</header>
+
+<div class="call-banner">
+  <div class="call-banner-inner">
+    <span class="call-banner-text">
+      Live workout call every day at 6:30 AM ET, Monday through Friday.
+      <span class="call-banner-sub">Press "Join Workout Call" below to join. No login needed.</span>
+    </span>
+    <a href="https://meet.google.com/uov-ratx-ayu" class="join-call-btn" target="_blank" rel="noopener">📹 Join Workout Call</a>
+  </div>
+</div>
+
+<main id="main-content">
+  <div class="content-page">
+    <h1>Resources</h1>
+    <p class="page-intro">A few extras alongside the calendar: a progress-tracking template, and links out to the instructors and the rest of the site.</p>
+
+    <section class="content-card">
+      <h2>Body measurement template</h2>
+      <p>
+        Optional, and only if you find it motivating: some people like
+        tracking measurements alongside how workouts feel, since the scale
+        doesn't show strength or mobility gains. Measure every two to four
+        weeks, at the same time of day, with the tape snug but not tight.
+        This is one way to track progress, not a requirement.
+      </p>
+      <div class="table-scroll">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Chest (in)</th>
+              <th>Waist (in)</th>
+              <th>Hips (in)</th>
+              <th>Thigh (in)</th>
+              <th>Arm (in)</th>
+              <th>Notes</th>
+            </tr>
+          </thead>
+          <tbody id="measurement-tbody"></tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px; font-size:0.85rem; color:var(--text-muted);">
+        Tip: use your browser's print option (Ctrl/Cmd+P) to print this page as a blank paper copy.
+      </p>
+    </section>
+
+    <section class="content-card">
+      <h2>More from the site</h2>
+      <div class="resource-links">
+        <a class="resource-link" href="safety.html">Safety guide<span class="resource-sub">Form, modifications, warning signs</span></a>
+        <a class="resource-link" href="watch-party.html">Watch party<span class="resource-sub">Join the daily 6:30 AM ET call</span></a>
+        <a class="resource-link" href="survey.html">Survey<span class="resource-sub">Share your feedback</span></a>
+        <a class="resource-link" href="../index.html">Calendar<span class="resource-sub">The full workout schedule</span></a>
+        <a class="resource-link" href="guidelines.html">Guidelines<span class="resource-sub">Getting started and the disclaimer</span></a>
+      </div>
+    </section>
+
+    <section class="content-card">
+      <h2>Instructor channels</h2>
+      <p>The people behind the workouts on the calendar, in case you want more from any of them:</p>
+      <div class="resource-links">
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=Grow+with+Jo" target="_blank" rel="noopener">Grow with Jo</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=Tara%27s+body" target="_blank" rel="noopener">Tara's Body</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=You1stLondon" target="_blank" rel="noopener">You1stLondon</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=Eleni+Fit" target="_blank" rel="noopener">Eleni Fit</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=Afroletics" target="_blank" rel="noopener">Afroletics</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=MonikaFit" target="_blank" rel="noopener">MonikaFit</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=SeniorShape+Fitness" target="_blank" rel="noopener">SeniorShape Fitness</a>
+        <a class="resource-link" href="https://www.youtube.com/results?search_query=POPSUGAR+Fitness" target="_blank" rel="noopener">POPSUGAR Fitness</a>
+      </div>
+      <p style="margin-top:12px; font-size:0.8rem; color:var(--text-muted);">These open a YouTube search for each channel's name.</p>
+    </section>
+
+    <a class="back-link" href="../index.html">&larr; Back to the calendar</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <p>Home Workout Crew, built for the group and made to grow. Participation is voluntary; see the <a href="guidelines.html#disclaimer">disclaimer</a>.</p>
+</footer>
+
+<script>
+  const tbody = document.getElementById("measurement-tbody");
+  for (let i = 0; i < 8; i++) {
+    const tr = document.createElement("tr");
+    tr.innerHTML = "<td>&nbsp;</td>".repeat(7);
+    tbody.appendChild(tr);
+  }
+</script>
+
+</body>
+</html>
