@@ -33,7 +33,7 @@
 <div class="call-banner">
   <div class="call-banner-inner">
     <span class="call-banner-text">
-      Live workout call every day at 7:00 AM ET, Monday through Friday.
+      Live workout call every day at 6:30 AM ET, Monday through Friday.
       <span class="call-banner-sub">Press "Join Workout Call" below to join. No login needed.</span>
     </span>
     <a href="https://meet.google.com/uov-ratx-ayu" class="join-call-btn" target="_blank" rel="noopener">📹 Join Workout Call</a>
@@ -43,7 +43,43 @@
 <main id="main-content">
   <section class="hero">
     <h1>Workout Calendar</h1>
-    <p class="hero-sub">Monday through Friday workouts, Saturday and Sunday rest. Currently scheduled through September 30, 2026; more weeks get added as the plan continues.</p>
+    <p class="hero-sub">Monday through Friday workouts, Saturday and Sunday rest. One calendar, November 1 through November 30, 2026 (no workouts Thanksgiving or the day after).</p>
+  </section>
+
+  <section class="theme-legend" aria-label="Daily workout themes">
+    <h2 class="legend-heading">Daily themes</h2>
+    <div class="legend-grid">
+      <div class="legend-item">
+        <span class="legend-dot cat-dance" aria-hidden="true"></span>
+        <span class="legend-day">Monday</span>
+        <span class="legend-desc">Fun Cardio / Dance</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot cat-strength" aria-hidden="true"></span>
+        <span class="legend-day">Tuesday</span>
+        <span class="legend-desc">Strength Training</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot cat-pilates" aria-hidden="true"></span>
+        <span class="legend-day">Wednesday</span>
+        <span class="legend-desc">Reset: Pilates, Barre &amp; Yoga</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot cat-cardio" aria-hidden="true"></span>
+        <span class="legend-day">Thursday</span>
+        <span class="legend-desc">Full Body / HIIT</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot cat-cardio" aria-hidden="true"></span>
+        <span class="legend-day">Friday</span>
+        <span class="legend-desc">Standing Abs / Core</span>
+      </div>
+      <div class="legend-item">
+        <span class="legend-dot is-rest-dot" aria-hidden="true"></span>
+        <span class="legend-day">Sat &amp; Sun</span>
+        <span class="legend-desc">Rest</span>
+      </div>
+    </div>
   </section>
 
   <section id="calendar" class="calendar-section" aria-label="Workout calendar">
@@ -72,10 +108,13 @@
     <button id="modal-close" class="modal-close" aria-label="Close">✕</button>
     <p id="modal-meta" class="modal-meta"></p>
     <h3 id="modal-title" class="modal-title"></h3>
-    <div class="video-frame">
+    <div id="modal-video-frame" class="video-frame">
       <iframe id="modal-iframe" src="" title="Workout video" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowfullscreen loading="lazy"></iframe>
+    </div>
+    <div id="modal-embed-fallback" class="embed-fallback" hidden>
+      <p>This video's creator doesn't allow it to be played inside other sites. Use the button below to watch it on YouTube instead.</p>
     </div>
     <p id="modal-note" class="modal-note"></p>
     <a id="modal-yt-link" class="yt-link" href="#" target="_blank" rel="noopener">Open on YouTube ↗</a>
